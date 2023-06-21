@@ -1,0 +1,59 @@
+.header {
+  width: 100%;
+}
+
+.header div {
+  display: flex;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header_part {
+  width: 50%;
+  display: flex;
+  min-height: 80px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_part:last-child {
+  justify-content: flex-end;
+}
+
+.title {
+  color: #333;
+  font-size: 24px;
+  font-family: 'Open Sans';
+  font-weight: 700;
+}
+
+.nav {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+}
+
+.link {
+  color: #666;
+  font-size: 14px;
+  font-family: Inter;
+}
+
+.button_login {
+  width: 97px;
+  height: 39px;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 1px solid rgba(42, 39, 64, 0.50);
+  background: none;
+}
+
+.button_login span {
+  color: #2A2740;
+  font-size: 12px;
+  font-family: Inter;
+  font-weight: 600;
+}
