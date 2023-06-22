@@ -46,6 +46,17 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className={styles.features}>
+        <div className={styles.container}>
+          <p className={styles.features_txt}>Работаем <span>с</span></p>
+          <div className={styles.features_wrap}>
+            <img className={styles.logo} src="./img/logo_1.png" alt="logo" />
+            <img className={styles.logo} src="./img/logo_2.png" alt="logo" />
+            <img className={styles.logo} src="./img/logo_3.png" alt="logo" />
+            <img className={styles.logo} src="./img/logo_4.png" alt="logo" />
+          </div>
+        </div>
+      </div>
     </main>
   )
 }

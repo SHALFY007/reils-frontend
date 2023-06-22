@@ -165,3 +165,39 @@
 .button_start:hover span {
   color: #2A2740;
 }
+
+.features .container {
+  padding: 64px 0 105px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.features_txt {
+  font-size: 40px;
+  font-family: Inter;
+  font-weight: 800;
+  line-height: 150%;
+  background: linear-gradient(180deg, #8695b4 0%, #b0689e 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.features_txt span {
+  background: #333333;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.features_wrap {
+  margin-top: 59px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.logo {
+  
+}
