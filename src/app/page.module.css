@@ -57,3 +57,111 @@
   font-family: Inter;
   font-weight: 600;
 }
+
+.top_part {
+  margin-top: 31px;
+}
+
+.top_part .container {
+  display: flex;
+}
+
+.top_left {
+  width: 53.7%;
+  height: 100%;
+  padding-bottom: 78px;
+  display: flex;
+  align-items: flex-end;
+  min-height: 820px;
+  position: relative;
+}
+
+.left_bg {
+  width: 100%;
+  min-height: 492px;
+  background: url('../../public/img/img_sq.png');
+  background-repeat: no-repeat;
+  filter: blur(3px);
+}
+
+.coin {
+  position: absolute;
+  z-index: 3;
+}
+
+.coin:first-child {
+  top: 483px;
+  left: -115px;
+}
+
+.coin:nth-child(2) {
+  top: 0;
+  left: 44px;
+}
+
+.coin:nth-child(3) {
+  left: 416px;
+  top: 86px;
+}
+
+.coin:nth-child(4) {
+  z-index: 2;
+}
+
+.top_right {
+  margin-left: 6.04%;
+  padding-top: 140px;
+}
+
+.top_title {
+  display: flex;
+  width: 444.978px;
+  flex-direction: column;
+  flex-shrink: 0;
+  color: #333;
+  font-size: 52px;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 150%;
+  margin-bottom: 32px;
+}
+
+.top_description {
+  display: flex;
+  width: 471px;
+  flex-direction: column;
+  flex-shrink: 0;
+  color: #666;
+  font-size: 20px;
+  font-family: Inter;
+  line-height: 150%;
+  margin-bottom: 32px;
+}
+
+.button_start {
+  width: 194px;
+  height: 62px;
+  border-radius: 8px;
+  border: none;
+  background: #2A2740;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.button_start span {
+  color: #FFF;
+  font-size: 20px;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 150%;
+  transition: all .3s ease;
+}
+
+.button_start:hover {
+  background: #fff;
+  border: 1px solid #2A2740;
+}
+
+.button_start:hover span {
+  color: #2A2740;
+}

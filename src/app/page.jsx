@@ -32,7 +32,18 @@ export default function Home() {
       </header>
       <div className={styles.top_part}>
         <div className={styles.container}>
-          <div className={styles.top_left}></div>
+          <div className={styles.top_left}>
+            <img className={styles.coin} src="./img/Bitcoin.png" alt="Bitcoin" />
+            <img className={styles.coin} src="./img/BNB.png" alt="BNB" />
+            <img className={styles.coin} src="./img/Ethereum.png" alt="Ethereum" />
+            <img className={styles.coin} src="./img/image_w.png" alt="img_w" />
+            <div className={styles.left_bg}></div>
+          </div>
+          <div className={styles.top_right}>
+            <h1 className={styles.top_title}>Начни торговать криптовалютой прямо сейчас</h1>
+            <p className={styles.top_description}>Reils- твой верный помощник для заработка на трейдинге</p>
+            <button className={styles.button_start}><span>Начать</span></button>
+          </div>
         </div>
       </div>
     </main>
