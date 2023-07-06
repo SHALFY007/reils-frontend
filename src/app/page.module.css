@@ -366,8 +366,9 @@
 
 .price_cards {
   display: flex;
+  width: 100%;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .price_card {
@@ -376,10 +377,28 @@
   flex-shrink: 0;
   border-radius: 20px;
   border: 2px solid #EDECF3;
-  background: #FCFCFC;
+  background-color: #FCFCFC;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 24px;
+  justify-content: space-around;
+  transition: all .3s ease;
+}
+
+.price_card:hover {
+  background: linear-gradient(135deg, rgba(161, 179, 223, 0.56) 0%, rgba(152, 185, 217, 0.42) 23.44%, rgba(140, 191, 239, 0.48) 48.44%, rgba(185, 132, 189, 0.43) 76.56%, rgba(197, 124, 180, 0.56) 94.27%);
+}
+
+.price_card:hover .card_title, 
+.price_card:hover .card_price, 
+.price_card:hover .card_plus p,
+.price_card:hover .card_buy span {
+  color: #fff !important;
+} 
+
+.price_card:hover .card_buy {
+  background: #2A2740;
 }
 
 .card_title {
@@ -389,6 +408,13 @@
   font-style: normal;
   font-weight: 600;
   line-height: 150%;
+  display: flex;
+  align-items: center;
+  transition: all .3s ease;
+}
+
+.card_title img {
+  margin-left: 5px;
 }
 
 .card_price {
@@ -399,11 +425,54 @@
   font-weight: 600;
   line-height: 150%;
   display: flex;
+  transition: all .3s ease;
 }
 
 .card_price span {
   font-size: 20px;
   text-align: start;
+}
+
+.card_pluses {
+  margin-bottom: 32px;
+}
+
+.card_plus {
+  display: flex;
+}
+
+.card_plus svg {
+  margin-right: 6px;
+}
+
+.card_plus p {
+  color: #5C5972;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  transition: all .3s ease;
+}
+
+.card_buy {
+  border-radius: 6px;
+  border: 1.5px solid rgba(42, 39, 64, 0.40);
+  background: #FFF;
+  padding: 10px 79px;
+  transition: all .3s ease;
+  margin-bottom: 10px;
+}
+
+.card_buy span {
+  color: #2A2740;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  transition: all .3s ease;
+
 }
 
 @media (max-width: 1368px) {
