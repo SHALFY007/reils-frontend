@@ -212,6 +212,42 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <hr />
+      <footer className={styles.footer}>
+        <div className={styles.container}>
+          <div className={styles.footer_left}>
+            <h3 className={styles.footer_header}>Reils</h3>
+            <p className={styles.footer_desc}>Reils- лучшие сигналы для трейдинга и арбитража</p>
+            <button className={styles.footer_link}><span className={styles.footer_btn_txt}>Перейти</span></button>
+          </div>
+          <div className={styles.footer_right}>
+            <div className={styles.footer_column}>
+              <a href='#'>Menu</a>
+              <a href='#'>Menu</a>
+              <a href='#'>Menu</a>
+              <a href='#'>Menu</a>
+            </div>
+            <div className={styles.footer_column}>
+              <a href='#'>Menu</a>
+              <a href='#'>Menu</a>
+              <a href='#'>Menu</a>
+              <a href='#'>Menu</a>
+            </div>
+            <div className={styles.footer_column}>
+              <a href='#'>Menu</a>
+              <a href='#'>Menu</a>
+              <a href='#'>Menu</a>
+              <a href='#'>Menu</a>
+            </div>
+            <div className={styles.footer_column}>
+              <a href='#'>Menu</a>
+              <a href='#'>Menu</a>
+              <a href='#'>Menu</a>
+              <a href='#'>Menu</a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </main>
   )
 }
