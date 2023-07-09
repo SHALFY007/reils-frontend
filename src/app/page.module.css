@@ -580,3 +580,45 @@
     display: none;
   }
 }
+
+@media (max-width: 748px) {
+  .nav {
+    display: none;
+  }
+
+  .container {
+    max-width: 100vw;
+  }
+
+  .top_right {
+    padding-top: 0px;
+  }
+
+  .top_title {
+    max-width: 73%;
+    font-size: 189%;
+  }
+
+  .top_description {
+    max-width: 73%;
+    font-size: 110%;
+  }
+
+  .logo {
+    margin: 0 auto;
+    max-width: 220px;
+    margin-bottom: 20px;
+  }
+
+  .garant .container {
+    padding: 0 15px 0 15px;
+  }
+
+  .garant_low {
+    flex-wrap: wrap;
+  }
+
+  .price_card {
+    margin-bottom: 15px;
+  }
+}
