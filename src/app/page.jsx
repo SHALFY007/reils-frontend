@@ -4,7 +4,7 @@ import Image from 'next/image'
 import styles from './page.module.css'
 import './static.css'
 import { useEffect, useRef, useState } from 'react';
-import Aos from 'aos';
+import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
 
@@ -12,7 +12,6 @@ export default function Home() {
 
   const hold = useRef();
   const [name, setName] = useState('Reils')
-  Aos.init();
   const [plan, setPlan] = useState([
     {
       id: 1,
@@ -57,6 +56,10 @@ export default function Home() {
     el.querySelector('h3').classList.add('tarif_choosed')
   }
 
+  useEffect(() => {
+    AOS.init()
+  }, [])
+
   return (
     <main className={styles.main}>
       <header className={styles.header}>
@@ -78,14 +81,14 @@ export default function Home() {
       </header>
       <div className={styles.top_part}>
         <div className={styles.container}>
-          <div className={styles.top_left}>
+          <div className={styles.top_left} data-aos="fade-right">
             <img className={styles.coin} src="./img/Bitcoin.png" alt="Bitcoin" />
             <img className={styles.coin} src="./img/BNB.png" alt="BNB" />
             <img className={styles.coin} src="./img/Ethereum.png" alt="Ethereum" />
             <img className={styles.coin} src="./img/image_w.png" alt="img_w" />
             <div className={styles.left_bg}></div>
           </div>
-          <div className={styles.top_right}>
+          <div className={styles.top_right} data-aos="fade-left">
             <h1 className={styles.top_title}>Начни торговать криптовалютой прямо сейчас</h1>
             <p className={styles.top_description}>Reils- твой верный помощник для заработка на трейдинге</p>
             <button className={styles.button_start}><span>Начать</span></button>
@@ -95,7 +98,7 @@ export default function Home() {
       <div className={styles.features}>
         <div className={styles.container}>
           <p className={styles.features_txt} data-aos="fade-up">Работаем <span>с</span></p>
-          <div className={styles.features_wrap}>
+          <div className={styles.features_wrap} data-aos="fade-up">
             <img className={styles.logo} src="./img/logo_1.png" alt="logo" />
             <img className={styles.logo} src="./img/logo_2.png" alt="logo" />
             <img className={styles.logo} src="./img/logo_3.png" alt="logo" />
@@ -110,7 +113,7 @@ export default function Home() {
             <p className={styles.garant_description} data-aos="fade-left">Сигналам от команды Reils доверяют сотни людей ежедневно, начни зарабатывать вместе с нами! </p>
           </div>
           <div className={styles.garant_low}>
-            <div className={styles.garant_card}>
+            <div className={styles.garant_card} data-aos="fade-right">
               <div className={styles.garant_card_top}>
                 <div className={styles.circle}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
@@ -136,7 +139,7 @@ export default function Home() {
               </div>
               <p className={styles.garant_text}>Перед покупкой VIP-канала вы можете удостоверится в точности наших прогнозов</p>
             </div>
-            <div className={styles.garant_card}>
+            <div className={styles.garant_card} data-aos="fade-up">
               <div className={styles.garant_card_top}>
                 <div className={styles.circle}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
@@ -148,7 +151,7 @@ export default function Home() {
               </div>
               <p className={styles.garant_text}>Торгуя по нашей стратегии риск потерять средства- минимален</p>
             </div>
-            <div className={styles.garant_card}>
+            <div className={styles.garant_card} data-aos="fade-left">
               <div className={styles.garant_card_top}>
                 <div className={styles.circle}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
@@ -167,9 +170,9 @@ export default function Home() {
       </div>
       <div className={styles.list}>
         <div className={styles.container}>
-          <h1 className={styles.price_header}>Выберите <span>Тариф</span> чтобы присоединиться</h1>
-          <p className={styles.price_desc}>Мы предлагаем лучшие цены за свои услуги</p>
-          <div className={styles.price_chooser}>
+          <h1 className={styles.price_header} data-aos="fade-up">Выберите <span>Тариф</span> чтобы присоединиться</h1>
+          <p className={styles.price_desc} data-aos="fade-up">Мы предлагаем лучшие цены за свои услуги</p>
+          <div className={styles.price_chooser} data-aos="fade-up">
             <div className={styles.price_choose} cont="1" onClick={tarif}>
               <h3 className={`${styles.price_title} tarif_choosed`}>Неделя</h3>
             </div>
@@ -181,7 +184,7 @@ export default function Home() {
           <div className={styles.price_cards}>
             {
               plan.map(el => {
-                return <div className={styles.price_card} key={el.id}>
+                return <div className={styles.price_card} key={el.id} data-aos="fade-up">
                 <h4 className={styles.card_title}>{el.title} <img src={el.path} alt="coin" /></h4>
                 <h1 className={styles.card_price}>{el.price}<span>&#8381;</span></h1>
                 <div className={styles.card_pluses}>
