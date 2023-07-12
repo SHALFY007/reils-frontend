@@ -3,12 +3,16 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 import './static.css'
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
 
 export default function Home() {
 
   const hold = useRef();
-
+  const [name, setName] = useState('Reils')
+  Aos.init();
   const [plan, setPlan] = useState([
     {
       id: 1,
@@ -58,7 +62,7 @@ export default function Home() {
       <header className={styles.header}>
         <div className={styles.container}>
           <div className={styles.header_part}>
-            <h3 className={styles.title}>Reils</h3>
+            <h3 className={styles.title}>{name}</h3>
             <nav className={styles.nav} onClick={choose}>
               <a className={`${styles.link} choosed`} href="#">Главная</a>
               <a className={styles.link} href="#">Информация</a>
@@ -90,7 +94,7 @@ export default function Home() {
       </div>
       <div className={styles.features}>
         <div className={styles.container}>
-          <p className={styles.features_txt}>Работаем <span>с</span></p>
+          <p className={styles.features_txt} data-aos="fade-up">Работаем <span>с</span></p>
           <div className={styles.features_wrap}>
             <img className={styles.logo} src="./img/logo_1.png" alt="logo" />
             <img className={styles.logo} src="./img/logo_2.png" alt="logo" />
@@ -102,8 +106,8 @@ export default function Home() {
       <div className={styles.garant}>
         <div className={styles.container}>
           <div className={styles.garant_top}>
-            <h1 className={styles.garant_header}>Точные <span>сигналы</span> от лучших специалистов</h1>
-            <p className={styles.garant_description}>Сигналам от команды Reils доверяют сотни людей ежедневно, начни зарабатывать вместе с нами! </p>
+            <h1 className={styles.garant_header} data-aos="fade-right">Точные <span>сигналы</span> от лучших специалистов</h1>
+            <p className={styles.garant_description} data-aos="fade-left">Сигналам от команды Reils доверяют сотни людей ежедневно, начни зарабатывать вместе с нами! </p>
           </div>
           <div className={styles.garant_low}>
             <div className={styles.garant_card}>
@@ -222,28 +226,28 @@ export default function Home() {
           </div>
           <div className={styles.footer_right}>
             <div className={styles.footer_column}>
-              <a href='#'>Menu</a>
-              <a href='#'>Menu</a>
-              <a href='#'>Menu</a>
-              <a href='#'>Menu</a>
+              <a href='#'>Меню</a>
+              <a href='#'>Преимущества</a>
+              <a href='#'>Цены</a>
+              <a href='#'>Отзывы</a>
             </div>
             <div className={styles.footer_column}>
-              <a href='#'>Menu</a>
-              <a href='#'>Menu</a>
-              <a href='#'>Menu</a>
-              <a href='#'>Menu</a>
+              <a href='#'>Преимущества</a>
+              <a href='#'>Ссылка</a>
+              <a href='#'>Ссылка</a>
+              <a href='#'>Ссылка</a>
             </div>
             <div className={styles.footer_column}>
-              <a href='#'>Menu</a>
-              <a href='#'>Menu</a>
-              <a href='#'>Menu</a>
-              <a href='#'>Menu</a>
+              <a href='#'>Цены</a>
+              <a href='#'>Ссылка</a>
+              <a href='#'>Ссылка</a>
+              <a href='#'>Ссылка</a>
             </div>
             <div className={styles.footer_column}>
-              <a href='#'>Menu</a>
-              <a href='#'>Menu</a>
-              <a href='#'>Menu</a>
-              <a href='#'>Menu</a>
+              <a href='#'>Отзывы</a>
+              <a href='#'>Ссылка</a>
+              <a href='#'>Ссылка</a>
+              <a href='#'>Ссылка</a>
             </div>
           </div>
         </div>

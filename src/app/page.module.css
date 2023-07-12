@@ -111,6 +111,7 @@
 .top_right {
   margin-left: 6.04%;
   padding-top: 140px;
+  animation: appear 2s forwards;
 }
 
 .top_title {
@@ -620,5 +621,14 @@
 
   .price_card {
     margin-bottom: 15px;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
